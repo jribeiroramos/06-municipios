@@ -37,20 +37,23 @@ def executar():
     filtros = data.get("filtros", [])
     limite = data.get("limite", 10)  # Limite padrão de 10 registros
 
-    # Construir a cláusula WHERE
+    # Construir a cláusula WHERE com segurança
     clausulas = []
+    valores = []
     for filtro in filtros:
-        operador_logico = filtro.get("operador_logico", "")
+        operador_logico = filtro.get("operador_logico", "AND").upper()  # Padrão: AND
         coluna = filtro.get("coluna")
         operador = filtro.get("operador")
         valor = filtro.get("valor")
 
-        # Adicionar operador lógico, exceto no primeiro filtro
-        if clausulas and operador_logico:
-            clausulas.append(operador_logico)
+        if coluna and operador:
+            # Adicionar operador lógico entre filtros
+            if clausulas:
+                clausulas.append(operador_logico)
 
-        # Adicionar o filtro atual
-        clausulas.append(f"{coluna} {operador} '{valor}'")
+            # Adicionar filtro com parâmetros para evitar SQL Injection
+            clausulas.append(f"{coluna} {operador} ?")
+            valores.append(valor)
 
     where_clause = " ".join(clausulas)
     sql_query = f"SELECT {', '.join(colunas)} FROM {tabela}"
@@ -60,8 +63,9 @@ def executar():
 
     try:
         conn = get_db_connection()
-        resultados = conn.execute(sql_query).fetchall()
-        colunas_resultado = [desc[0] for desc in conn.execute(sql_query).description]
+        cursor = conn.execute(sql_query, valores)
+        resultados = cursor.fetchall()
+        colunas_resultado = [desc[0] for desc in cursor.description]
         conn.close()
 
         return jsonify({
