@@ -35,21 +35,26 @@
             <button class="btn btn-secondary mt-2" onclick="adicionarFiltro()">Adicionar Filtro</button>
         </div>
 
+        <!-- Seleção de agrupamento -->
+        <div id="agrupamento-container" class="mb-4" style="display: none;">
+            <label class="form-label">Selecione as colunas para agrupar:</label>
+            <div id="agrupamento"></div>
+        </div>
+
         <!-- Botão de execução -->
         <button class="btn btn-primary" onclick="executarConsulta()">Executar Consulta</button>
 
         <!-- SQL gerado -->
         <div class="mt-4">
-            <h5>Consulta SQL Gerada:</h5>
-            <textarea id="sql-gerado" class="form-control" rows="4" readonly></textarea>
+            <h5>Consulta SQL Gerada (Editável):</h5>
+            <textarea id="sql-gerado" class="form-control" rows="4" placeholder="Digite sua consulta SQL aqui"></textarea>
+            <button class="btn btn-primary mt-2" onclick="executarSQLPersonalizado()">Executar SQL Personalizado</button>
         </div>
 
         <!-- Resultados -->
         <div class="mt-4">
-            <h5>Resultados (mostrando até 10 registros):</h5>
+            <h5>Resultados:</h5>
             <div id="resultados"></div>
-            <button class="btn btn-secondary mt-3" id="btn-ver-todos" style="display: none;" onclick="verTodos()">Ver Todos</button>
-            <button class="btn btn-success mt-3" id="btn-exportar" style="display: none;" onclick="exportarCSV()">Baixar CSV</button>
         </div>
     </div>
 
@@ -75,6 +80,18 @@
 
                         const filtrosContainer = document.getElementById("filtros-container");
                         filtrosContainer.style.display = "block";
+
+                        const agrupamentoContainer = document.getElementById("agrupamento-container");
+                        agrupamentoContainer.style.display = "block";
+                        const agrupamentoDiv = document.getElementById("agrupamento");
+                        agrupamentoDiv.innerHTML = "";
+                        data.forEach(coluna => {
+                            const checkbox = `<div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="${coluna}" id="agrupamento-${coluna}">
+                                <label class="form-check-label" for="agrupamento-${coluna}">${coluna}</label>
+                            </div>`;
+                            agrupamentoDiv.innerHTML += checkbox;
+                        });
                     })
                     .catch(error => {
                         console.error("Erro ao carregar colunas:", error);
@@ -128,18 +145,25 @@
                 operador: el.querySelector(".filtro-operador").value,
                 valor: el.querySelector(".filtro-valor").value
             }));
+            const agrupamento = Array.from(document.querySelectorAll("#agrupamento input:checked")).map(el => el.value);
 
             fetch("/executar", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ tabela, colunas, filtros, limite: 10 })
+                body: JSON.stringify({ tabela, colunas, filtros, agrupamento, limite: 10 })
             })
                 .then(response => response.json())
                 .then(data => {
                     const resultadosDiv = document.getElementById("resultados");
-                    const btnVerTodos = document.getElementById("btn-ver-todos");
-                    const btnExportar = document.getElementById("btn-exportar");
+                    const sqlGerado = document.getElementById("sql-gerado");
 
+                    if (data.sql) {
+                        sqlGerado.value = data.sql;
+                    } else {
+                        sqlGerado.value = "Erro ao gerar consulta SQL.";
+                    }
+
+                    resultadosDiv.innerHTML = "";
                     if (data.resultados && data.resultados.length > 0) {
                         let html = "<table class='table'><thead><tr>";
                         data.colunas.forEach(col => html += `<th>${col}</th>`);
@@ -151,17 +175,57 @@
                         });
                         html += "</tbody></table>";
                         resultadosDiv.innerHTML = html;
-                        btnVerTodos.style.display = "inline-block";
-                        btnExportar.style.display = "inline-block";
                     } else {
                         resultadosDiv.innerHTML = "<p class='text-danger'>Nenhum resultado encontrado.</p>";
-                        btnVerTodos.style.display = "none";
-                        btnExportar.style.display = "none";
                     }
                 })
                 .catch(error => {
                     console.error("Erro ao executar consulta:", error);
                     alert("Erro ao executar consulta. Verifique o backend.");
+                });
+        }
+
+        function executarSQLPersonalizado() {
+            const sqlQuery = document.getElementById("sql-gerado").value;
+
+            if (!sqlQuery.trim()) {
+                alert("Por favor, insira uma consulta SQL válida.");
+                return;
+            }
+
+            console.log("SQL enviado:", sqlQuery);
+
+            fetch("/executar-sql", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ sql: sqlQuery })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Resposta recebida:", data);
+                    const resultadosDiv = document.getElementById("resultados");
+                    resultadosDiv.innerHTML = "";
+
+                    if (data.erro) {
+                        resultadosDiv.innerHTML = `<p class='text-danger'>Erro: ${data.erro}</p>`;
+                    } else if (data.resultados && data.resultados.length > 0) {
+                        let html = "<table class='table'><thead><tr>";
+                        data.colunas.forEach(col => html += `<th>${col}</th>`);
+                        html += "</tr></thead><tbody>";
+                        data.resultados.forEach(row => {
+                            html += "<tr>";
+                            for (const key in row) html += `<td>${row[key]}</td>`;
+                            html += "</tr>";
+                        });
+                        html += "</tbody></table>";
+                        resultadosDiv.innerHTML = html;
+                    } else {
+                        resultadosDiv.innerHTML = "<p class='text-danger'>Nenhum resultado encontrado.</p>";
+                    }
+                })
+                .catch(error => {
+                    console.error("Erro ao executar SQL:", error);
+                    alert("Erro ao executar a consulta SQL personalizada. Verifique o backend.");
                 });
         }
     </script>

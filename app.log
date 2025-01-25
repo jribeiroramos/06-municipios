@@ -1,0 +1,108 @@
+2025-01-24 09:40:06,642 -  * Debugger is active!
+2025-01-24 09:40:06,643 -  * Debugger PIN: 100-776-910
+2025-01-24 09:43:30,473 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-24 09:43:30,473 - [33mPress CTRL+C to quit[0m
+2025-01-24 09:43:30,480 -  * Restarting with watchdog (inotify)
+2025-01-24 09:43:30,699 -  * Debugger is active!
+2025-01-24 09:43:30,700 -  * Debugger PIN: 100-776-910
+2025-01-24 09:43:37,145 - 127.0.0.1 - - [24/Jan/2025 09:43:37] "GET / HTTP/1.1" 200 -
+2025-01-24 09:43:45,238 - 127.0.0.1 - - [24/Jan/2025 09:43:45] "GET /colunas/municipios HTTP/1.1" 200 -
+2025-01-24 09:43:48,379 - 127.0.0.1 - - [24/Jan/2025 09:43:48] "POST /executar-sql HTTP/1.1" 200 -
+2025-01-24 09:52:17,990 -  * Detected change in '/home/pentaho/projetos/06-municipios/app.py', reloading
+2025-01-24 09:52:18,135 -  * Detected change in '/home/pentaho/projetos/06-municipios/.goutputstream-990A12', reloading
+2025-01-24 09:52:18,140 -  * Detected change in '/home/pentaho/projetos/06-municipios/app.py', reloading
+2025-01-24 09:52:18,855 -  * Restarting with watchdog (inotify)
+2025-01-24 14:43:43,064 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-24 14:43:43,064 - [33mPress CTRL+C to quit[0m
+2025-01-24 14:43:43,074 -  * Restarting with watchdog (inotify)
+2025-01-24 14:43:43,272 -  * Debugger is active!
+2025-01-24 14:43:43,273 -  * Debugger PIN: 100-776-910
+2025-01-24 14:43:48,739 - 127.0.0.1 - - [24/Jan/2025 14:43:48] "GET / HTTP/1.1" 200 -
+2025-01-24 14:43:54,416 - 127.0.0.1 - - [24/Jan/2025 14:43:54] "GET /colunas/municipios HTTP/1.1" 200 -
+2025-01-24 14:44:00,912 - 127.0.0.1 - - [24/Jan/2025 14:44:00] "GET /colunas/municipios HTTP/1.1" 200 -
+2025-01-24 14:44:11,562 - 127.0.0.1 - - [24/Jan/2025 14:44:11] "POST /executar HTTP/1.1" 200 -
+2025-01-24 14:44:13,252 - 127.0.0.1 - - [24/Jan/2025 14:44:13] "POST /executar-sql HTTP/1.1" 200 -
+2025-01-24 15:14:30,988 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/__init__.py', reloading
+2025-01-24 15:14:31,006 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/__init__.py', reloading
+2025-01-24 15:14:31,016 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/__init__.py', reloading
+2025-01-24 15:14:31,027 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/__main__.py', reloading
+2025-01-24 15:14:31,044 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/__main__.py', reloading
+2025-01-24 15:14:31,047 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/__main__.py', reloading
+2025-01-24 15:14:31,066 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/cli.py', reloading
+2025-01-24 15:14:31,076 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/cli.py', reloading
+2025-01-24 15:14:31,085 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/cli.py', reloading
+2025-01-24 15:14:31,094 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/ipython.py', reloading
+2025-01-24 15:14:31,100 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/ipython.py', reloading
+2025-01-24 15:14:31,102 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/ipython.py', reloading
+2025-01-24 15:14:31,105 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/main.py', reloading
+2025-01-24 15:14:31,108 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/main.py', reloading
+2025-01-24 15:14:31,113 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/main.py', reloading
+2025-01-24 15:14:31,131 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/parser.py', reloading
+2025-01-24 15:14:31,147 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/parser.py', reloading
+2025-01-24 15:14:31,152 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/parser.py', reloading
+2025-01-24 15:14:31,165 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/variables.py', reloading
+2025-01-24 15:14:31,183 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/variables.py', reloading
+2025-01-24 15:14:31,185 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/variables.py', reloading
+2025-01-24 15:14:31,196 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/version.py', reloading
+2025-01-24 15:14:31,205 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/version.py', reloading
+2025-01-24 15:14:31,219 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/dotenv/version.py', reloading
+2025-01-24 15:14:31,476 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/__init__.py', reloading
+2025-01-24 15:14:31,489 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/microsoft.py', reloading
+2025-01-24 15:14:31,497 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/firefox.py', reloading
+2025-01-24 15:14:31,535 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/chrome.py', reloading
+2025-01-24 15:14:31,538 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/microsoft.py', reloading
+2025-01-24 15:14:31,598 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/microsoft.py', reloading
+2025-01-24 15:14:31,624 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/opera.py', reloading
+2025-01-24 15:14:31,630 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/opera.py', reloading
+2025-01-24 15:14:31,632 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/opera.py', reloading
+2025-01-24 15:14:31,654 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/constants.py', reloading
+2025-01-24 15:14:31,685 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/config.py', reloading
+2025-01-24 15:14:31,689 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/archive.py', reloading
+2025-01-24 15:14:31,712 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/__init__.py', reloading
+2025-01-24 15:14:31,714 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/download_manager.py', reloading
+2025-01-24 15:14:31,753 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/driver_cache.py', reloading
+2025-01-24 15:14:31,779 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/driver.py', reloading
+2025-01-24 15:14:31,785 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/config.py', reloading
+2025-01-24 15:14:31,788 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/config.py', reloading
+2025-01-24 15:14:31,790 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/config.py', reloading
+2025-01-24 15:14:31,822 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/constants.py', reloading
+2025-01-24 15:14:31,825 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/constants.py', reloading
+2025-01-24 15:14:31,827 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/constants.py', reloading
+2025-01-24 15:14:31,830 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/download_manager.py', reloading
+2025-01-24 15:14:31,841 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/download_manager.py', reloading
+2025-01-24 15:14:31,844 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/download_manager.py', reloading
+2025-01-24 15:14:31,857 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/driver.py', reloading
+2025-01-24 15:14:31,858 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/driver.py', reloading
+2025-01-24 15:14:31,859 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/driver.py', reloading
+2025-01-24 15:14:31,860 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/driver_cache.py', reloading
+2025-01-24 15:14:31,862 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/driver_cache.py', reloading
+2025-01-24 15:14:31,863 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/driver_cache.py', reloading
+2025-01-24 15:14:31,871 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/file_manager.py', reloading
+2025-01-24 15:14:31,872 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/file_manager.py', reloading
+2025-01-24 15:14:31,873 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/file_manager.py', reloading
+2025-01-24 15:14:31,873 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/http.py', reloading
+2025-01-24 15:14:31,874 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/http.py', reloading
+2025-01-24 15:14:31,875 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/http.py', reloading
+2025-01-24 15:14:31,876 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/logger.py', reloading
+2025-01-24 15:14:31,877 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/logger.py', reloading
+2025-01-24 15:14:31,877 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/logger.py', reloading
+2025-01-24 15:14:31,878 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/manager.py', reloading
+2025-01-24 15:14:31,882 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/manager.py', reloading
+2025-01-24 15:14:31,883 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/manager.py', reloading
+2025-01-24 15:14:31,884 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/os_manager.py', reloading
+2025-01-24 15:14:31,885 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/os_manager.py', reloading
+2025-01-24 15:14:31,885 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/os_manager.py', reloading
+2025-01-24 15:14:31,888 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/utils.py', reloading
+2025-01-24 15:14:31,889 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/utils.py', reloading
+2025-01-24 15:14:31,890 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/core/utils.py', reloading
+2025-01-24 15:14:31,894 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/drivers/opera.py', reloading
+2025-01-24 15:14:31,895 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/drivers/__init__.py', reloading
+2025-01-24 15:14:31,895 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/drivers/edge.py', reloading
+2025-01-24 15:14:31,897 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/drivers/firefox.py', reloading
+2025-01-24 15:14:31,902 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/drivers/chrome.py', reloading
+2025-01-24 15:14:31,902 -  * Detected change in '/home/pentaho/.local/lib/python3.10/site-packages/webdriver_manager/drivers/ie.py', reloading
+2025-01-24 15:14:32,223 -  * Restarting with watchdog (inotify)
+2025-01-24 15:14:32,454 -  * Debugger is active!
+2025-01-24 15:14:32,455 -  * Debugger PIN: 100-776-910
